@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Samples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        main {
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        audio {
+            margin: 20px auto;
+            display: block;
+            width: 80%;
+            max-width: 600px;
+        }
+        .description {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #555;
+        }
+        .controls {
+            margin: 10px 0;
+        }
+        .controls a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .controls a:hover {
+            text-decoration: underline;
+        }
+        .loop-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .loop-button.active {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Track Samples</h1>
+        <p>Enjoy listening to these audio clips!</p>
+    </header>
+
+    <main>
+        <div>
+            <h3>It's been so long</h3>
+            <audio id="audio1" controls>
+                <source src="https://s17.aconvert.com/convert/p3r68-cdx67/su9f2-4beew.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button class="loop-button" data-audio="audio1">Loop</button>
+            <a href="https://s17.aconvert.com/convert/p3r68-cdx67/su9f2-4beew.mp3" download="it's been so long.mp3">Download MP3</a>
+        </div>
+
+        <div>
+            <h3>Fnaf 1</h3>
+            <audio id="audio2" controls>
+                <source src="https://s31.aconvert.com/convert/p3r68-cdx67/q8j0y-27rm6.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button class="loop-button" data-audio="audio2">Loop</button>
+            <a href="https://s31.aconvert.com/convert/p3r68-cdx67/q8j0y-27rm6.mp3" download="Fnaf 1.mp3">Download MP3</a>
+        </div>
+
+        <div>
+            <h3>Jump up superstar!</h3>
+            <audio id="audio3" controls>
+                <source src="https://s31.aconvert.com/convert/p3r68-cdx67/fxnv5-2wj8w.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button class="loop-button" data-audio="audio3">Loop</button>
+            <a href="https://s31.aconvert.com/convert/p3r68-cdx67/fxnv5-2wj8w.mp3" download="Jump up superstar!.mp3">Download MP3</a>
+        </div>
+
+        <div>
+            <h3>Super Mario Bros.</h3>
+            <audio id="audio4" controls>
+                <source src="https://s31.aconvert.com/convert/p3r68-cdx67/77ogt-ezpfw.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button class="loop-button" data-audio="audio4">Loop</button>
+            <a href="https://s31.aconvert.com/convert/p3r68-cdx67/77ogt-ezpfw.mp3" download="You thought it was the Super Mario Brothers! BUT T'WAS I! TETRIS!.mp3">Download MP3</a>
+        </div>
+
+        <div>
+            <h3>Super Mario Bros.</h3>
+            <audio id="audio5" controls>
+                <source src="https://s31.aconvert.com/convert/p3r68-cdx67/da0o7-7pux4.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button class="loop-button" data-audio="audio5">Loop</button>
+            <a href="https://s31.aconvert.com/convert/p3r68-cdx67/da0o7-7pux4.mp3" download="Legit Super Mario Bros.mp3">Download MP3</a>
+        </div>
+
+        <div>
+            <h3>Gourmet race</h3>
+            <audio id="audio6" controls>
+                <source src="https://s31.aconvert.com/convert/p3r68-cdx67/1pyqh-5u0rc.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button class="loop-button" data-audio="audio6">Loop</button>
+            <a href="https://s31.aconvert.com/convert/p3r68-cdx67/1pyqh-5u0rc.mp3" download="Gourmet Race.mp3">Download MP3</a>
+        </div>
+
+        <div>
+            <h3>Field of hopes and dreams</h3>
+            <audio id="audio7" controls>
+                <source src="https://s19.aconvert.com/convert/p3r68-cdx67/d8k8g-y5fo7.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button class="loop-button" data-audio="audio7">Loop</button>
+            <a href="https://s19.aconvert.com/convert/p3r68-cdx67/d8k8g-y5fo7.mp3" download="Field of hopes and dreams.mp3">Download MP3</a>
+        </div>
+    </main>
+
+    <script>
+        const audioElements = document.querySelectorAll('audio');
+        const loopButtons = document.querySelectorAll('.loop-button');
+
+        audioElements.forEach(audio => {
+            audio.addEventListener('play', function() {
+                audioElements.forEach(otherAudio => {
+                    if (otherAudio !== audio && !otherAudio.paused) {
+                        otherAudio.pause();
+                    }
+                });
+            });
+        });
+
+        loopButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const audioId = this.dataset.audio;
+                const audio = document.getElementById(audioId);
+                audio.loop = !audio.loop;
+                this.classList.toggle('active', audio.loop);
+            });
+        });
+    </script>
+</body>
+</html>
